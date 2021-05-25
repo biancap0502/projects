@@ -175,7 +175,7 @@ public class Main {
         } else if (remove == 1) {
             System.out.println("Stergerea persoanei s-a realizat cu succes.");
             ArrayList<Guest> guests = guestList.getGuestList();
-            int placesNo = curs29Exceptii.proiect1.Main.guestList.getAvailablePlaces();
+            int placesNo = Main.guestList.getAvailablePlaces();
             Guest transferredGuest = guests.get(placesNo - 1);
             System.out.println(transferredGuest.getLastName() + " " + transferredGuest.getFirstName() +
                     " a fost transferat/a pe lista de participanti.");
@@ -253,8 +253,8 @@ public class Main {
     }
 
     private static void guests() {
-        ArrayList<Guest> guestList = curs29Exceptii.proiect1.Main.guestList.getGuestList();
-        int placesNo = curs29Exceptii.proiect1.Main.guestList.getAvailablePlaces();
+        ArrayList<Guest> guestList = Main.guestList.getGuestList();
+        int placesNo = Main.guestList.getAvailablePlaces();
         if (guestList.size() >= placesNo) {
             for (int i = 0; i < placesNo; i++) {
                 System.out.println(guestList.get(i));
@@ -269,8 +269,8 @@ public class Main {
     }
 
     private static void waitlist() {
-        ArrayList<Guest> guestList = curs29Exceptii.proiect1.Main.guestList.getGuestList();
-        int placesNo = curs29Exceptii.proiect1.Main.guestList.getAvailablePlaces();
+        ArrayList<Guest> guestList = Main.guestList.getGuestList();
+        int placesNo = Main.guestList.getAvailablePlaces();
         if (guestList.size() > placesNo) {
             for (int i = placesNo; i < guestList.size(); i++) {
                 System.out.println(guestList.get(i));
