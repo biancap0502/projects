@@ -62,7 +62,7 @@ public class Guest {
     }
 
 
-    public boolean isEqualTo(curs29Exceptii.proiect1.Guest guestObj) {
+    public boolean isEqualTo(Guest guestObj) {
         if (guestObj.firstName != null && guestObj.lastName != null){
             if (this.firstName.equals(guestObj.firstName) &&
                     this.lastName.equalsIgnoreCase(guestObj.lastName)) return true;
