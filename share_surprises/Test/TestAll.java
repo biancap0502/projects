@@ -1,5 +1,5 @@
 package share_surprises.Test;
-
+import share_surprises.GatherSurprises;
 import share_surprises.containers.BagFactoryStorage;
 import share_surprises.containers.IBag;
 import share_surprises.shareSurprises.GiveSurpriseAndApplause;
