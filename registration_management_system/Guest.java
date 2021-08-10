@@ -1,6 +1,6 @@
 package registration_management_system;
 
-public class Guest {
+public class Guest<String> {
 
     private String firstName;
     private String lastName;
@@ -46,34 +46,39 @@ public class Guest {
         this.phoneNumber = phoneNumber;
     }
 
-    public boolean fieldContainsSubstr(String str) {
-        return this.firstName.toLowerCase().contains(str) ||
-                this.lastName.toLowerCase().contains(str) ||
-                this.email.toLowerCase().contains(str) ||
-                this.phoneNumber.toLowerCase().contains(str);
+    public int getSmth(int number){
+        int sum = 0;
+        return sum + number;
     }
 
-    @Override
-    public String toString() {
-        return "First name: " + this.firstName +
-                " last name: " + this.lastName +
-                " email: " + this.email +
-                " phone number: " + this.phoneNumber;
-    }
-
-
-    public boolean isEqualTo(Guest guestObj) {
-        if (guestObj.firstName != null && guestObj.lastName != null){
-            if (this.firstName.equals(guestObj.firstName) &&
-                    this.lastName.equalsIgnoreCase(guestObj.lastName)) return true;
-        }
-        if (guestObj.email != null){
-            if (this.email.equals(guestObj.email)) return true;
-        }
-        if (guestObj.phoneNumber != null){
-            if (this.phoneNumber.equals(guestObj.phoneNumber)) return true;
-        }
-        return false;
-    }
+//    public boolean fieldContainsSubstr(String str) {
+//        return this.firstName.toLowerCase().contains(str) ||
+//                this.lastName.toLowerCase().contains(str) ||
+//                this.email.toLowerCase().contains(str) ||
+//                this.phoneNumber.toLowerCase().contains(str);
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "First name: " + this.firstName +
+//                " last name: " + this.lastName +
+//                " email: " + this.email +
+//                " phone number: " + this.phoneNumber;
+//    }
+//
+//
+//    public boolean isEqualTo(Guest guestObj) {
+//        if (guestObj.firstName != null && guestObj.lastName != null){
+//            if (this.firstName.equals(guestObj.firstName) &&
+//                    this.lastName.equalsIgnoreCase(guestObj.lastName)) return true;
+//        }
+//        if (guestObj.email != null){
+//            if (this.email.equals(guestObj.email)) return true;
+//        }
+//        if (guestObj.phoneNumber != null){
+//            if (this.phoneNumber.equals(guestObj.phoneNumber)) return true;
+//        }
+//        return false;
+//    }
 
 }
